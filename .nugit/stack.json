@@ -31,5 +31,15 @@
       "status": "open"
     }
   ],
-  "resolution_contexts": []
+  "resolution_contexts": [],
+  "layer": {
+    "position": 2,
+    "stack_size": 3,
+    "below": {
+      "type": "stack_pr",
+      "pr_number": 5,
+      "head_branch": "test-stack1"
+    },
+    "above": null
+  }
 }
