@@ -17,8 +17,8 @@
       "position": 1,
       "head_branch": "test1",
       "base_branch": "test0",
-      "head_sha": "701ccc01929362ac16423d1c946ac832662ce554",
-      "base_sha": "a4947f4556dfdc0219527c39e613f9531f52fc9b",
+      "head_sha": "9f8b2abc99d38e92a9414294a34dbeb63719dc7b",
+      "base_sha": "6ddd906057eb6698766c84ae84d2654aff3c7a1a",
       "status": "open"
     }
   ],
