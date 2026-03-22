@@ -40,6 +40,10 @@
       "pr_number": 5,
       "head_branch": "test-stack1"
     },
-    "above": null
+    "above": null,
+    "tip": {
+      "pr_number": 6,
+      "head_branch": "test-stack2"
+    }
   }
 }
