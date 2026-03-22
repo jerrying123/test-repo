@@ -11,24 +11,6 @@
       "head_sha": "5dc2130cd7668c8a579990281a552bcc9f9cc711",
       "base_sha": "5723a78aa4117804f2e3ae9d59b186a758781b20",
       "status": "open"
-    },
-    {
-      "pr_number": 5,
-      "position": 1,
-      "head_branch": "test-stack1",
-      "base_branch": "test-stack0",
-      "head_sha": "faddc2fdf23c417b7f0f9a2bffa18f5c59122e90",
-      "base_sha": "5dc2130cd7668c8a579990281a552bcc9f9cc711",
-      "status": "open"
-    },
-    {
-      "pr_number": 6,
-      "position": 2,
-      "head_branch": "test-stack2",
-      "base_branch": "test-stack1",
-      "head_sha": "77d838aeb2d111bc3335051bd33fa18ea6f24b11",
-      "base_sha": "faddc2fdf23c417b7f0f9a2bffa18f5c59122e90",
-      "status": "open"
     }
   ],
   "resolution_contexts": [],
@@ -43,6 +25,10 @@
       "type": "stack_pr",
       "pr_number": 5,
       "head_branch": "test-stack1"
+    },
+    "tip": {
+      "pr_number": 6,
+      "head_branch": "test-stack2"
     }
   }
 }
