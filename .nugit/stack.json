@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "repo_full_name": "jerrying123/test-repo",
+  "created_by": "jerrying123",
+  "prs": [
+    {
+      "pr_number": 4,
+      "position": 0,
+      "head_branch": "test-stack0",
+      "base_branch": "main",
+      "head_sha": "5dc2130cd7668c8a579990281a552bcc9f9cc711",
+      "base_sha": "5723a78aa4117804f2e3ae9d59b186a758781b20",
+      "status": "open"
+    }
+  ],
+  "resolution_contexts": [],
+  "layer": {
+    "position": 0,
+    "stack_size": 3,
+    "below": {
+      "type": "branch",
+      "ref": "main"
+    },
+    "above": {
+      "type": "stack_pr",
+      "pr_number": 5,
+      "head_branch": "test-stack1"
+    },
+    "tip": {
+      "pr_number": 6,
+      "head_branch": "test-stack2"
+    }
+  }
+}
