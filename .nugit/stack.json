@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "repo_full_name": "jerrying123/test-repo",
+  "created_by": "jerrying123",
+  "prs": [
+    {
+      "pr_number": 10,
+      "position": 0,
+      "head_branch": "demo/todo-0-postgres",
+      "base_branch": "main",
+      "head_sha": "5ffbb11303757bc84cb98d12e518642e8c7b0dc0",
+      "base_sha": "e9369402daf7aa642c152ce76c7f5bdbac99181e",
+      "status": "open"
+    }
+  ],
+  "layer": {
+    "position": 0,
+    "stack_size": 3,
+    "below": {
+      "type": "branch",
+      "ref": "main"
+    },
+    "above": {
+      "type": "stack_pr",
+      "pr_number": 11,
+      "head_branch": "demo/todo-1-api"
+    },
+    "tip": {
+      "pr_number": 12,
+      "head_branch": "demo/todo-2-nicegui"
+    }
+  }
+}
