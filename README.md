@@ -23,7 +23,7 @@ nugit stack propagate --push
 nugit stack view
 ```
 
-Replace `repo_full_name` / `created_by` in `.nugit/stack.json` if `nugit init` does not match your fork.
+On **`demo/todo-2-nicegui`**, `.nugit/stack.json` is a template with **`repo_full_name`** `jerrying123/test-repo` and empty **`prs`**. Edit it to match your GitHub login/repo, or run **`nugit init`** and **`nugit stack add --pr …`** after you open the three stacked PRs.
 
 ## Run locally
 
