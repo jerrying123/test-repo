@@ -1,6 +1,55 @@
 # test-repo — nugit demo (todo app)
 
+**Public example:** [github.com/jerrying123/test-repo](https://github.com/jerrying123/test-repo)
+
 Sandbox repo for **stacked PRs** with the **nugit** CLI. This example is a small **FastAPI** REST API, **PostgreSQL** (via Docker), and a **NiceGUI** web UI for a generic todo list.
+
+You can use this repo **only on GitHub** (browse branches and PRs in the browser) or follow **§ Explore with the nugit CLI** below to exercise **`stack list`**, **`view`** / **`stack view`**, and related commands against the **same** public `owner/repo` without forking—**read-only** exploration only. Changing stack state or opening PRs requires your own fork or maintainer access.
+
+---
+
+## Explore with the nugit CLI (public repo)
+
+These commands target **`jerrying123/test-repo`** explicitly. You do **not** need a local clone of this repo for them (any directory is fine).
+
+**Token:** For **read-only** commands against this **public** repo, nugit can omit **`NUGIT_USER_TOKEN`** and use **unauthenticated** GitHub `GET`s (roughly **60 requests/hour** per IP). Set a [PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for **`auth whoami`**, **posting comments**, **private** repos, or **smoother** browsing.
+
+```bash
+# Install the published CLI (or use a clone of github.com/jerrying123/nugit and run ./cli/src/nugit.js)
+npm install -g nugit-cli
+
+# Optional — higher rate limits and write actions
+export NUGIT_USER_TOKEN=ghp_your_token_here
+# nugit auth whoami   # verify token (needs NUGIT_USER_TOKEN)
+
+# Open PRs in this demo repo (read-only; works without a token on public repos)
+nugit prs list --repo jerrying123/test-repo
+
+# Scan open PR heads for .nugit/stack.json and list discovered stacks (deduped by tip)
+nugit stack list --repo jerrying123/test-repo
+
+# If your nugit config uses lazy discovery, force a full scan for this run:
+NUGIT_STACK_DISCOVERY_FULL=1 nugit stack list --repo jerrying123/test-repo
+
+# Interactive TUI: same as `nugit stack view` — works on public repos without a token (reads only)
+nugit view --repo jerrying123/test-repo --ref demo/todo-2-nicegui
+
+# Non-interactive peek at the same stack file + PR metadata counts
+nugit view --repo jerrying123/test-repo --ref demo/todo-2-nicegui --no-tui
+```
+
+**What you are seeing:** **`stack list`** shows how nugit **discovers** stacks from multiple PR heads. **`view --repo … --ref …`** shows how it loads **`.nugit/stack.json`** from a **remote ref** and joins it with GitHub PR/issue data. If **`prs`** in that file is still empty, the viewer lists no stacked PRs until maintainers (or you on a fork) run **`nugit stack add`** and push.
+
+**Optional clone** (run app locally *or* use cwd-based nugit defaults):
+
+```bash
+git clone https://github.com/jerrying123/test-repo.git
+cd test-repo
+git checkout demo/todo-2-nicegui   # full app + template .nugit/stack.json
+nugit stack show                    # prints local .nugit/stack.json
+```
+
+---
 
 ## Branches (linear stack)
 
@@ -23,7 +72,7 @@ nugit stack propagate --push
 nugit stack view
 ```
 
-Replace `repo_full_name` / `created_by` in `.nugit/stack.json` if `nugit init` does not match your fork.
+On **`demo/todo-2-nicegui`**, `.nugit/stack.json` is a template with **`repo_full_name`** `jerrying123/test-repo` and empty **`prs`**. Edit it to match your GitHub login/repo, or run **`nugit init`** and **`nugit stack add --pr …`** after you open the three stacked PRs.
 
 ## Run locally
 
