@@ -1,3 +1,3 @@
 pub fn widget_id() -> &'static str {
-    "tree-nav-widget"
+    "tree-nav-widget-v2"
 }
