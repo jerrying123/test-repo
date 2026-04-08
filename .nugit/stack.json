@@ -11,20 +11,30 @@
       "head_sha": "6ddd906057eb6698766c84ae84d2654aff3c7a1a",
       "base_sha": "5723a78aa4117804f2e3ae9d59b186a758781b20",
       "status": "open"
+    },
+    {
+      "pr_number": 8,
+      "position": 1,
+      "head_branch": "test1",
+      "base_branch": "test0",
+      "head_sha": "9f8b2abc99d38e92a9414294a34dbeb63719dc7b",
+      "base_sha": "6ddd906057eb6698766c84ae84d2654aff3c7a1a",
+      "status": "open"
     }
   ],
   "resolution_contexts": [],
   "layer": {
-    "position": 0,
+    "position": 1,
     "stack_size": 3,
     "below": {
-      "type": "branch",
-      "ref": "main"
+      "type": "stack_pr",
+      "pr_number": 7,
+      "head_branch": "test0"
     },
     "above": {
       "type": "stack_pr",
-      "pr_number": 8,
-      "head_branch": "test1"
+      "pr_number": 9,
+      "head_branch": "test2"
     },
     "tip": {
       "pr_number": 9,
